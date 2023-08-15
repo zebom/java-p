@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <!-- <h2>JavaScript try catch</h2> -->
+<!-- 
+
+  ex1
+
+<p>Please input a number between 5 and 10:</p>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="p01"></p> -->
+
+<!-- ex2 -->
+
+ <!-- <p>Please amount you are going to spend:</p>
+<input id="memo" type="text">
+<button type="button" onclick="myFunction()">Submit</button>
+<p id="to1"></p> 
+     -->
+
+    <script>
+      // ex1
+
+//         function myFunction() {
+//   const message = document.getElementById("p01");
+//   message.innerHTML = "";
+//   let x = document.getElementById("demo").value;
+//   try { 
+//     if(x.trim() == "")  throw "empty";
+//     if(isNaN(x)) throw "not a number";
+//     x = Number(x);
+//     if(x < 5)  throw "too low";
+//     if(x > 10)   throw "too high";
+//   }
+//   catch(err) {
+//     message.innerHTML = "Input is " + err;
+//   }
+// }
+
+// ex2
+
+// const spendingTracker = () => {
+//   const message = document.getElementById("to1");
+//   message.innerHTML = "";
+//   let x = document.getElementById("memo").value;
+//   try {
+//     if (x.trim() === "") throw "empty";
+//     if (isNaN(x)) throw "not anumber"
+//     if (x <= 20000) throw "enjoy your day"
+//     if (x > 20000) throw "exceeded amount"
+//   } catch (error) {
+//     message.innerHTML = "Input is: " + error;
+    
+//   }
+  
+ 
+// };
+
+// spendingTracker();
+
+// const myFunction = () => {
+//   let firstName= "zainab";
+//   let lastName= "mahamud";
+//   let fullName= firstName.toUpperCase() + " " + lastName.toUpperCase();
+//   console.log(fullName);
+  
+// };
+// myFunction();
+
+// const spending = () => {
+//   const amountAllowed = 20000;
+//   const amountSpent = parseFloat(prompt("Enter the amount you spent:"));
+
+//   if (isNaN(amountSpent)) {
+//     console.log("Invalid input. Please enter a valid number.");
+//   } else if (amountSpent <= 0) {
+//     console.log("Invalid amount. Please enter a positive value.");
+//   } else {
+//     if (amountSpent <= amountAllowed) {
+//       console.log("Go ahead and enjoy! You are within the spending limit.");
+//     } else {
+//       console.log("You have exceeded the amount to spend. Be mindful of your expenses.");
+//     }
+//   }
+// };
+
+// spending();
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
