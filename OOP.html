@@ -10,6 +10,9 @@
 </head>
 <body>
    <script>
+
+    // inheritance
+    
 //     var studentOne = {
 //         email: 'John@gmail.com',
 //         name: 'John Doe',
@@ -40,27 +43,46 @@
 //             console.log(this.email,'has logged out');
 //         }
 //     };
-//     console.log(studentOne.login());
+// //     console.log(studentOne.login());
 //     console.log(studentTwo.logout());
 //     console.log(studentThree.logout());
    
 
-//    class student{
-//     constructor(email,name){
-//         this.email = email;
-//         this.name = name;
-//     }
-//     login(){
-//         console.log(this.email,'has logged in');      
-//     }
-//     logout(){
-//         console.log(this.email,'has logged out');
-//     }
-//    }
-//    var studentOne = new student("Johndoe@gmail.com","John doe");
-//    var studentTwo= new student("Marydoe@gmail.com","Mary doe");
-//    console.log(studentOne.login());
-//    console.log(studentOne.logout());
+   class student{
+    constructor(email,name){
+        this.email = email;
+        this.name = name;
+    }
+    login(){
+        console.log(this.email,'has logged in');      
+    }
+    logout(){
+        console.log(this.email,'has logged out');
+    }
+   }
+
+   class PartTimeStudent extends student{
+
+   }
+   let student1 = new PartTimeStudent('student1@gmail.com','student1')
+   console.log(student1.login())
+
+   class FullTimeStudent extends PartTimeStudent{
+
+   }
+   let studenta = new FullTimeStudent('studenta@gmail.com','studenta')
+   console.log(studenta.logout())
+   let studentb = new FullTimeStudent('studentb@gmail.com','student')
+   console.log(studentb.login())
+
+
+
+   var studentOne = new student("Johndoe@gmail.com","John doe");
+   var studentTwo= new student("Marydoe@gmail.com","Mary doe");
+   console.log(studentOne.login());
+   console.log(studentOne.logout());
+
+
     // let deposit = 150000;
     // let withdraw = 50000;
     // class Account{
@@ -125,20 +147,20 @@
 // accountOne.withdraw(60000);
 // accountOne.checkBalance();
 
-class Alien { // Name of the class
-    // The constructor method will take a number of parameters and assign those parameters as properties to the created object.
-    constructor (name, phrase) {
-        this.name = name
-        this.phrase = phrase
-        this.species = "alien"
-    }
-    // These will be the object's methods.
-    fly = () => console.log("Zzzzzziiiiiinnnnnggggg!!")
-    sayPhrase = () => console.log(this.phrase)
-}
-const alien1 = new Alien("Ali", "I'm Ali the alien!")
-// We use the "new" keyword followed by the corresponding class name
-// and pass it the corresponding parameters according to what was declared in the class constructor function
+// class Alien { // Name of the class
+//     // The constructor method will take a number of parameters and assign those parameters as properties to the created object.
+//     constructor (name, phrase) {
+//         this.name = name
+//         this.phrase = phrase
+//         this.species = "alien"
+//     }
+//     // These will be the object's methods.
+//     fly = () => console.log("Zzzzzziiiiiinnnnnggggg!!")
+//     sayPhrase = () => console.log(this.phrase)
+// }
+// const alien1 = new Alien("Ali", "I'm Ali the alien!")
+// // We use the "new" keyword followed by the corresponding class name
+// // and pass it the corresponding parameters according to what was declared in the class constructor function
 
 
    </script> 

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+
+           // callback
+        // function showLoading(){
+        //     console.log("1.Loading Screen Appeared");
+        // }
+        // function hideLoading(){
+        //     console.log("4.Loading Screen Hidden");
+        // }
+        // function getData(callback){
+        //     console.log("2.Start Pulling Data");
+        //     setTimeout(()=>{
+        //         console.log("3.Finished Pulling Data");
+        //         callback();
+        //     }, 2000);
+        // }
+        // showLoading();
+        // getData(hideLoading);
+        // hideLoading
+
+
+        /*asynchronous programming
+        synchronous programming
+        1. line code
+        2.second line
+        3.third line - connecting to db/ API 2 min
+        4.fourth*/
+        
+        // promise
+        let promise = new Promise((resolve,reject)=>{
+            let grade = "A";
+            if (grade==="v"){
+                resolve("the parent buys bike for the kid");  
+            }
+            else{
+                reject("the parent doesn't buy bike for the kid");
+            }
+        })
+        promise.then((message)=>{
+            console.log(message);
+        })
+        .catch((message)=>{-
+            console.log(message);
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+
+
+       class Employee{
+        #firstname;
+        #lastname;
+        #department;
+        #salary;
+        constructor(firstname,lastname,department,salary){
+            this.#firstname = firstname;
+            this.#lastname = lastname;
+            this.#department = department;
+            this.#salary = salary;
+        }
+
+        set setfirstname(val){
+            this.#firstname =val;
+        }
+        set setlastname(val){
+            this.#lastname =val;
+        }
+        set setdepartment(val){
+            this.#department =val;
+        }
+        set setsalary(val){
+            this.#salary = val;
+        }
+        calculateSalary(hoursWorked){
+            return this.#salary * hoursWorked;
+        }
+
+        get fullname(){
+            return `.Your fullname is: ${this.#firstname} ${this.#lastname} in ${this.#department} \n your salary per hour is: ${this.#salary}`;
+        }
+
+         }
+        
+    // let employeea = new Employee('samuel','njau', 'marketing', 2000,);
+    // let hoursWorked = 50;
+    // let calculatedSalary = employeea.calculateSalary(hoursWorked);
+    // console.log(employeea.fullname);
+    // console.log(`Calculated salary: ${calculatedSalary}`);
+    
+    
+     class PartTimeEmployee extends Employee{
+        
+         calculateSalary(hoursWorked){
+            return super.calculateSalary(hoursWorked);
+         }
+
+    }
+    let employeeA = new PartTimeEmployee('ali','njau', 'finanace ', 1200,);
+     let partTimehoursWorked= 40;
+     let calculatedpartTimeSalary = employeeA.calculateSalary(partTimehoursWorked);
+     console.log(employeeA.fullname);
+     console.log(`total salary: ${calculatedpartTimeSalary}`);
+
+     
+    
+     class fullTimeEmployee extends Employee{
+         calculateSalary(hoursWorked){
+            return super.calculateSalary(hoursWorked);
+         }
+
+    }
+    let employee1 = new fullTimeEmployee('YUSUF','Ahmed', 'IT ', 1500,);
+     let fullTimehoursWorked= 60;
+     let calculatedfullTimeSalary = employee1.calculateSalary(fullTimehoursWorked);
+     console.log(employee1.fullname);
+     console.log(`total salary: ${calculatedfullTimeSalary}`);
+    
+
+
+
+
+
+// Use super to call the base method
+// Private fields cannot be accessed directly in derived classes. Instead, you should use the setter and getter methods defined in the base class.
+
+       
+    </script>
+</body>
+</html>

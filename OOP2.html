@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+    //     // abstraction
+    
+    // class Employee{
+    //     #monthlyBonus;
+    //     constructor(name,age,salary){
+    //         this.name = name;
+    //         this.age = age;
+    //         this.salary = salary;
+    //         this.#monthlyBonus = 2000
+    //     }
+
+    //     #FinalSalary(){
+    //         let FinalSalary = this.salary + this.#monthlyBonus;
+    //         console.log("your final salary is" + FinalSalary);
+    //     }
+
+    //     EmpDetails(){
+    //         // return('your name is:$(this.name), you are $(this.age) years old, your monthly salary')
+    //         return this.#FinalSalary();
+    //     }
+
+    // } 
+    // let emp1 = new Employee('Ali Mohamed',25,4500);
+    // console.log(emp1.EmpDetails());
+    // let emp2 = new Employee('anuu ali',20,10000);
+    // console.log(emp2.EmpDetails());
+
+    // // emp1.FinalSalary();
+    
+    // // polympphism
+    // class Animal{
+    //     constructor(name){
+    //         this.name = name;
+    //     }
+    //     makeSound(){
+    //         console.log("This is the default sound");
+    //     }
+    // }
+     
+    // class cat extends Animal{
+    //     makeSound(){
+    //         console.log('meew meew');
+    //     }
+    // }
+
+    // animal1 = new Animal('animal');
+    // animal1.makeSound();
+
+    // cat1 = new cat('mycat');
+    // cat1.makeSound();
+
+    // encapsulation
+    
+    class student{
+        #firstname;
+        #lastname;
+        #score;
+        constructor(first,last,score){
+            this.#firstname = first;
+            this.#lastname = last;
+            this.#score = score;
+        }
+        set setfirstname(val){
+            this.#firstname =val;
+        }
+        set setlastname(val){
+            this.#lastname =val;
+        }
+        set setscore(val){
+            this.#score =val;{
+                if(val < 1){
+                    console.log("score cant br -ve No");
+                }
+                else if(val > 100){
+                    console.log("score cant be more than 100")
+                }
+                else{
+                    this.score = val;
+                }
+            }
+        
+        }
+        get fullname(){
+            return `your fullname is: ${this.#firstname} ${this.#lastname} ${this.#score}`;
+        }
+
+    }
+    let students1 = new student('samuel','njau',50);
+    console.log(students1.fullname);
+    let students2 = new student('yumi','pel',90);
+    console.log(students2.fullname);
+    
+    
+    
+    </script>
+</body>
+</html>
